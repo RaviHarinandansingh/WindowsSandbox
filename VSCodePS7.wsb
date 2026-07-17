@@ -1,0 +1,15 @@
+<Configuration>
+	<Networking>Enable</Networking>
+	<MappedFolders>
+		<MappedFolder>
+			<HostFolder>Script</HostFolder>
+			<SandboxFolder>C:\Users\WDAGUtilityAccount\Desktop\Script</SandboxFolder>
+			<ReadOnly>true</ReadOnly>
+		</MappedFolder>
+	</MappedFolders>
+	<LogonCommand>
+		<Command>netsh interface ipv4 set dnsservers "Ethernet" static 8.8.8.8 primary</Command>
+		<Command>powershell -executionpolicy bypass -command "start powershell {-noexit -file C:\Users\WDAGUtilityAccount\Desktop\Script\SandboxScript.ps1}"</Command>
+	</LogonCommand>
+	<MemoryInMB>16384</MemoryInMB>
+</Configuration>
