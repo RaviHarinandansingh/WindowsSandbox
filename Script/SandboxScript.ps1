@@ -32,7 +32,7 @@ Write-Output "Install Visual Studio Code Insiders"
 Find-WinGetPackage -Id "Microsoft.VisualStudioCode.Insiders" -MatchOption Equals | Install-WinGetPackage
 
 # Add few VS code extensions
-$extensionList = @ (
+$extensionList = @(
 			"ms-vscode.powershell",
 			"mechatroner.rainbow-csv",
 			"phplasma.csv-to-table",
