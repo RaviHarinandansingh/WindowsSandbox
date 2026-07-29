@@ -28,8 +28,18 @@ Write-Output "Install Powershell 7"
 Find-WinGetPackage -Id "Microsoft.PowerShell" -MatchOption Equals | Install-WinGetPackage
 
 # Install Visual Studio Code Insiders
-Write-Output "Install Powershell 7"
+Write-Output "Install Visual Studio Code Insiders"
 Find-WinGetPackage -Id "Microsoft.VisualStudioCode.Insiders" -MatchOption Equals | Install-WinGetPackage
+
+# Add few VS code extensions
+
+# Install Git
+
+# Install DSC
+
+# Install Ow-My-Posh
+
+
 
 $scriptEndTime = Get-Date
 $duration = $scriptEndTime - $scriptStartTime
