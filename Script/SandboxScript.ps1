@@ -32,8 +32,23 @@ Write-Output "Install Visual Studio Code Insiders"
 Find-WinGetPackage -Id "Microsoft.VisualStudioCode.Insiders" -MatchOption Equals | Install-WinGetPackage
 
 # Add few VS code extensions
+$extensionList = @ (
+			"ms-vscode.powershell",
+			"mechatroner.rainbow-csv",
+			"phplasma.csv-to-table",
+			"awwsky.regionmarker",
+			"george-alisson.html-preview-vscode",
+			"azure-automation.vscode-azureautomation",
+			"oderwat.indent-rainbow",
+			"ms-vscode.vscode-speech"
+)
+
+foreach ($extension in $extensionList){
+    code-Insiders --install-extension $extension
+}
 
 # Install Git
+Find-WinGetPackage -Id "Git.Git" -MatchOption Equals | Install-WinGetPackage
 
 # Install DSC
 
