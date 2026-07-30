@@ -44,7 +44,7 @@ $extensionList = @(
 )
 
 foreach ($extension in $extensionList){
-    code-Insiders --install-extension $extension
+    & code-Insiders --install-extension $extension
 }
 
 # Install Git
